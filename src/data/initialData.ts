@@ -1,0 +1,157 @@
+import { AdminConfig, CustomerProfile, KnowledgeBase, ChatMessage } from '../types';
+
+export const initialKnowledgeBase: KnowledgeBase = {
+  companyName: 'ViralScale Video Ads Agency',
+  coreService: 'High-Converting Social Media Video Ads (TikTok, Instagram Reels, Facebook & YouTube)',
+  packages: [
+    {
+      id: 'pkg-15s',
+      name: 'Starter Hook Ad (15 Seconds)',
+      duration: '15 seconds',
+      usdPrice: 49,
+      pkrPrice: 12000,
+      turnaround: '24-48 Hours',
+      description: 'Ideal for TikTok & Instagram Reels. Includes 1 viral scroll-stopping hook, fast cuts, captions, licensed audio, and clear CTA.',
+      features: ['1 Viral Hook variation', 'Dynamic on-screen subtitles', 'Trending licensed audio', '24-48h Delivery', '2 Free Revisions'],
+    },
+    {
+      id: 'pkg-30s',
+      name: 'E-Commerce Pro Ad (30 Seconds)',
+      duration: '30 seconds',
+      usdPrice: 89,
+      pkrPrice: 22000,
+      turnaround: '48 Hours',
+      description: 'Our most popular sales driver! Problem-Agitate-Solution formula with 3 A/B test hooks, product demonstration highlights, and high-energy voiceover.',
+      features: ['3 Scroll-stopping hook angles', 'Full direct-response script', 'Professional voiceover included', 'Engaging motion graphics', 'Unlimited minor revisions'],
+    },
+    {
+      id: 'pkg-60s',
+      name: 'Scale & Authority Ad (60 Seconds)',
+      duration: '60 seconds',
+      usdPrice: 149,
+      pkrPrice: 38000,
+      turnaround: '72 Hours',
+      description: 'Deep-dive storytelling for high-ticket items, SaaS, and cosmetics. Thorough objection handling, social proof montage, and multiple hooks.',
+      features: ['Comprehensive script & storyboard', 'Multiple hook variations (A/B testing)', 'UGC actor footage sourcing or editing', 'Sound design & 3D mockups', 'Source files included'],
+    },
+  ],
+  faqs: [
+    {
+      id: 'faq-1',
+      question: 'ویڈیو بنوانے کے لیے مجھے کیا پرووائڈ کرنا ہوگا؟ (What do I need to provide?)',
+      answer: 'آپ کو صرف اپنے پروڈکٹ کا نام/لنک، فوٹوز یا را ویڈیوز (اگر ہوں)، اور ٹارگٹ کسٹمر بتانا ہے۔ سکرپٹ، وائس اوور اور ایڈیٹنگ ہم خود کریں گے۔',
+      category: 'Process',
+    },
+    {
+      id: 'faq-2',
+      question: 'What is the delivery time?',
+      answer: '15s & 30s ads take 24 to 48 hours. 60s scale ads take up to 72 hours. Urgent express 24h delivery is available upon request.',
+      category: 'Turnaround',
+    },
+    {
+      id: 'faq-3',
+      question: 'کیا اردو اور انگریزی دونوں میں وائس اوور مل سکتا ہے؟',
+      answer: 'جی بالکل! ہم اردو (پاکستانی ایکسنٹ)، رومن اردو، اور انگلش (نیچرل یا نیٹو ایکسنٹ) تینوں میں وائس اوور پرووائڈ کرتے ہیں۔',
+      category: 'Voiceover',
+    },
+    {
+      id: 'faq-4',
+      question: 'How do revisions work?',
+      answer: 'We provide unlimited minor revisions on text captions, colors, and music pacing until you are 100% satisfied.',
+      category: 'Revisions',
+    },
+  ],
+  portfolioSamples: [
+    { title: 'GlowSkin Organic Serum', duration: '30s', niche: 'Beauty & Skincare', platform: 'TikTok/Instagram', metric: '4.8x ROAS' },
+    { title: 'AeroPulse Wireless Earbuds', duration: '15s', niche: 'Tech Gadget', platform: 'TikTok Shop', metric: '1.2M Views' },
+    { title: 'FlexiFit Orthopedic Cushion', duration: '30s', niche: 'Home & Health', platform: 'Facebook Ads', metric: '1,400+ Sales' },
+  ],
+  revisionPolicy: 'Unlimited minor revisions within 7 days of delivery. Script modifications after voiceover recording may incur a small retake fee.',
+  turnaroundPolicy: 'Standard delivery 24-48 hours. Rush delivery available within 24 hours for +$20 / Rs. 5,000.',
+};
+
+export const initialCustomerProfile: CustomerProfile = {
+  id: 'cust-923001234567',
+  name: 'Hamza Khan',
+  phone: '+92 300 1234567',
+  avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+  preferredMode: 'AUTO',
+  detectedLanguage: 'urdu',
+  qualificationStatus: 'Warm',
+  notes: 'E-commerce store owner running Shopify dropshipping. Interested in TikTok ads for apparel and watches.',
+  videoAdBrief: {
+    productName: 'Smart Leather Wallet',
+    businessType: 'E-commerce Brand',
+    videoDuration: '30s',
+    targetPlatform: 'TikTok & Instagram',
+    goal: 'Increase online direct sales',
+    budget: '$89 (Rs. 22,000)',
+    hasRawFootage: true,
+    scriptNeeded: true,
+  },
+  tags: ['E-Commerce', 'TikTok Ads', 'High Intent', 'Urdu Speaker'],
+  lastActive: 'Just now',
+};
+
+export const initialAdminConfig: AdminConfig = {
+  responseMode: 'AUTO',
+  voiceEnabled: true,
+  defaultVoice: 'Kore',
+  languageMode: 'auto',
+  speakingStyle: 'friendly',
+  responseLength: 'concise',
+  voiceSpeed: 1.0,
+  fallbackToTextOnVoiceFail: true,
+  humanHandoverActive: false,
+  adminAlerts: [
+    {
+      id: 'alt-1',
+      time: '10:14 AM',
+      text: 'Voice processing engine initialized. Gemini 3.5 Transcribe & Gemini 3.1 Flash TTS active.',
+      type: 'info',
+    },
+  ],
+};
+
+export const initialConversation: ChatMessage[] = [
+  {
+    id: 'msg-1',
+    sender: 'customer',
+    type: 'text',
+    text: 'السلام علیکم، مجھے اپنے برانڈ کے لیے ویڈیو ایڈ بنوانی ہے۔',
+    detectedLanguage: 'urdu',
+    timestamp: '10:12 AM',
+    status: 'read',
+  },
+  {
+    id: 'msg-2',
+    sender: 'ai',
+    type: 'text',
+    text: 'وعلیکم السلام! جی بالکل، ہم آپ کے برانڈ کے لیے ہائی کنورٹنگ ویڈیو ایڈز تیار کرتے ہیں۔ آپ کا پروڈکٹ کس کیٹیگری کا ہے اور کس پلیٹ فارم (جیسے ٹک ٹاک یا انسٹاگرام) پر ایڈ چلانا چاہتے ہیں؟',
+    detectedLanguage: 'urdu',
+    timestamp: '10:12 AM',
+    status: 'read',
+  },
+  {
+    id: 'msg-3',
+    sender: 'customer',
+    type: 'voice',
+    text: 'اچھا یہ بتائیں کہ ویڈیو ایڈ کی پرائس کیا ہے اور کتنے سیکنڈ کی ویڈیو بنے گی؟',
+    durationSec: 5,
+    detectedLanguage: 'urdu',
+    timestamp: '10:13 AM',
+    status: 'read',
+    transcription: 'اچھا یہ بتائیں کہ ویڈیو ایڈ کی پرائس کیا ہے اور کتنے سیکنڈ کی ویڈیو بنے گی؟',
+  },
+  {
+    id: 'msg-4',
+    sender: 'ai',
+    type: 'voice',
+    text: 'جی! ہمارا 15 سیکنڈ کا سٹارٹر ایڈ 12,000 روپے ($49) سے اور سب سے پاپولر 30 سیکنڈ ای کامرس ایڈ 22,000 روپے ($89) میں بنتا ہے، جس میں 3 ہوکس اور فل وائس اوور شامل ہے۔ آپ کس ڈیوریشن میں انٹرسٹڈ ہیں؟',
+    durationSec: 9,
+    detectedLanguage: 'urdu',
+    timestamp: '10:13 AM',
+    status: 'read',
+    transcription: 'جی! ہمارا 15 سیکنڈ کا سٹارٹر ایڈ 12,000 روپے ($49) سے اور سب سے پاپولر 30 سیکنڈ ای کامرس ایڈ 22,000 روپے ($89) میں بنتا ہے، جس میں 3 ہوکس اور فل وائس اوور شامل ہے۔ آپ کس ڈیوریشن میں انٹرسٹڈ ہیں؟',
+  },
+];
