@@ -5,7 +5,9 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/Zulfiqar-Al-tax-voice-Agent/',
+    base:
+      process.env.BASE_PATH ||
+      (process.env.NETLIFY ? '/' : process.env.GITHUB_ACTIONS ? '/Zulfiqar-Al-tax-voice-Agent/' : '/'),
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {

@@ -1,0 +1,21 @@
+# Netlify Configuration for WhatsApp AI Agent
+
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--legacy-peer-deps"
+
+# Client-side routing: Redirect all requests to index.html for Single Page Application support
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Cache immutable assets efficiently
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
